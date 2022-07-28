@@ -33,6 +33,7 @@ function Card({ weather }) {
   const convertKtoC = (K) => {
     return (K - 273.15).toFixed(2) + '°C';
   };
+  console.log(weather);
   return (
     <CardBox>
       <Header>{weather.name === undefined ? 'City' : weather.name}</Header>
@@ -53,13 +54,13 @@ function Card({ weather }) {
           습도: 
           {weather.main === undefined
             ? '0 %'
-            : weather.main.humidity + '%'}
+            : weather.main.humidity + ' %'}
         </WeatherContent>
         <WeatherContent>
           풍속: 
           {weather.wind === undefined
             ? '0 m/s'
-            : weather.wind.speed + 'm/s'}
+            : weather.wind.speed + ' m/s'}
         </WeatherContent>
         <WeatherContent>
           날씨 상태: 
